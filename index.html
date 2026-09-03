@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Gift For You</title>
+    <!-- Google Fonts for typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Ambient Audio -->
+    <audio id="bg-music" loop src="music.mp3"></audio>
+
+    <!-- IMMERSIVE BACKGROUND PARTICLES CONTAINER -->
+    <div id="particle-container"></div>
+
+    <!-- STAGE 1: THE CINEMATIC GIFT BOX -->
+    <div id="gift-stage" class="stage active">
+        <div class="hint-text">Tap the box to open your surprise...</div>
+        <div class="scene">
+            <div class="box-container" onclick="openGift()">
+                <div class="box-lid">
+                    <div class="lid-top"></div>
+                    <div class="lid-front"></div>
+                    <div class="lid-back"></div>
+                    <div class="lid-left"></div>
+                    <div class="lid-right"></div>
+                </div>
+                <div class="box-body">
+                    <div class="body-front"></div>
+                    <div class="body-back"></div>
+                    <div class="body-left"></div>
+                    <div class="body-right"></div>
+                </div>
+                <div class="ribbon-vertical"></div>
+                <div class="ribbon-horizontal"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- STAGE 2: THE 3D GLASSMORPHIC PHOTO ALBUM -->
+    <div id="album-stage" class="stage">
+        <div class="album-container">
+            <div class="book">
+                <div class="page cover" id="p1">
+                    <div class="front-content">
+                        <h1>Our Memories</h1>
+                        <p>A collection of beautiful moments...</p>
+                        <span class="swipe-hint">Tap pages to flip &rarr;</span>
+                    </div>
+                    <div class="back-content">
+                        <img src="images/photo1.jpg" alt="1">
+                    </div>
+                </div>
+                <div class="page" id="p2">
+                    <div class="front-content"><img src="images/photo2.jpg" alt="2"></div>
+                    <div class="back-content"><img src="images/photo3.png" alt="3"></div>
+                </div>
+                <div class="page" id="p3">
+                    <div class="front-content"><img src="images/photo4.jpg" alt="4"></div>
+                    <div class="back-content"><img src="images/photo5.jpg" alt="5"></div>
+                </div>
+                <div class="page" id="p4">
+                    <div class="front-content end-page" onclick="goToLetter()">
+                        <h2>One Last Thing...</h2>
+                        <p class="pulse-text">Tap here to read my letter &hearts;</p>
+                    </div>
+                    <div class="back-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- STAGE 3: THE CINEMATIC LETTER -->
+    <div id="letter-stage" class="stage">
+        <div class="letter-wrapper">
+            <div class="heart-icon">&hearts;</div>
+            <div class="letter-content">
+                <p class="fade-in-text">Dear Riyanshi,</p>
+                <p class="fade-in-text">I wanted to create something special to look back at all the amazing times we've shared together. Every photo in that album represents a moment where you made my world a little brighter.</p>
+                <p class="fade-in-text">Thank you for being such an incredible part of my life. Your smile, your laughs, and your warmth mean everything to me.</p>
+                <p class="fade-in-text">Here is to creating thousands of more beautiful memories together, side by side.</p>
+                <p class="fade-in-text signature">With all my love,<br>Aryan</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
